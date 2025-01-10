@@ -34,13 +34,11 @@ body {
 
 nav {
   padding: 5vmin;
-  /* Reduce padding to decrease overall navbar height */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  /* Keep the navbar fixed at the top */
   top: 0;
   z-index: 10;
 }
@@ -49,38 +47,26 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Adjust alignment for content */
   width: 80%;
-  /* Set width to ensure a square container */
   height: 15%;
-  /* Match height with width */
   padding: 2vmin;
-  /* Adjust padding to fit content */
   border-radius: 50px;
-  /* Make the container circular */
   backdrop-filter: blur(10px);
-  /* Apply Gaussian blur to the background */
   background: rgba(255, 255, 255, 0.186);
-  /* Semi-transparent white background */
-
   border-image: linear-gradient(to right, #ffffff, #000000) 40;
   overflow: hidden;
-  /* Ensure no content overflows */
 }
 
 .logo {
   width: 4vmax;
-  /* Slightly smaller logo size to match reduced navbar height */
   height: auto;
   margin-right: auto;
-  /* Push the remaining elements to the right */
 }
 
 .nav-right {
   display: flex;
   align-items: center;
   gap: 1vw;
-  /* Spacing between items */
 }
 
 .nav-container h6 {
@@ -92,7 +78,6 @@ nav {
 
 .store-logo {
   width: 1.8vmax;
-  /* Slightly smaller size for store logos */
   height: 1.8vmax;
 }
 
@@ -127,12 +112,8 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* Align items to the left */
   align-items: center;
-  /* Align items vertically along the left */
-
   padding: 2rem;
-  /* Add padding around the container */
   font-family: 'Gillroy', sans-serif;
 }
 
@@ -140,68 +121,46 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Align checkmark and text vertically */
   gap: 0.5rem;
-  /* Add space between the checkmark and text */
   width: 100%;
-  /* Full-width container */
 }
 
 .check-item span {
   font-family: 'Gillroy', sans-serif;
   font-weight: lighter;
   font-size: 1.2vmax;
-  /* Adjust the font size to suit the check items */
   color: #1b1c1b;
-  /* Keep the text color consistent */
   display: inline;
-  /* Ensure it behaves like inline text */
   text-align: left;
-  /* Align text to the left */
 }
 
 .check {
   width: 1.2rem;
-  /* Adjust the size of the checkmark */
   height: auto;
-  /* Maintain aspect ratio */
   flex-shrink: 0;
-  /* Prevent checkbox from shrinking */
 }
 
-/* Media query for small screens */
 @media (max-width: 768px) {
   .checks {
     flex-direction: column;
-    /* Stack items vertically */
     align-items: flex-start;
-    /* Align items to the left */
     gap: 0.5rem;
-    /* Adjust the gap between items */
   }
 
   .check-item {
     flex-direction: row;
-    /* Keep checkbox and text on the same line */
     justify-content: flex-start;
-    /* Align each item to the left */
   }
 }
 
 .bottom-right-img {
   position: fixed;
   bottom: 2vmin;
-  /* Adjust the distance from the bottom edge */
   right: 2vmin;
-  /* Adjust the distance from the right edge */
   width: 20vmax;
-  /* Set the desired size for the image */
   height: auto;
-  /* Maintain the aspect ratio */
   z-index: 100;
-  /* Ensure it stays above other elements */
   pointer-events: none;
-  /* Prevent it from interfering with interactions */
 }
 
 @media (max-width:768px) {
@@ -218,38 +177,24 @@ nav {
   border-radius: 49px;
   background-color: #F6FEF7;
   position: relative;
-  /* Make the card a containing block for positioned elements */
   overflow: hidden;
-  /* Hide any overflowing content */
 }
 
 .circle {
 
   height: 40vmax;
-  /* Adjust the height for a smaller circle */
   width: 40vmax;
-  /* Set the width equal to the height to make it a perfect circle */
   position: absolute;
-  /* Allow precise placement inside the card */
   bottom: -40%;
-  /* Align to the bottom of the card */
   left: 50%;
-  /* Align horizontally at the center */
   transform: translateX(-50%);
-  /* Adjust to perfectly center the circle */
   border-radius: 50%;
-  /* Ensure the element is circular */
   background: linear-gradient(to bottom, #29dc71, #bfffd8);
   display: flex;
-  /* Optional: center content inside the circle */
   justify-content: center;
-  /* Optional: horizontally center the text */
   align-items: center;
-  /* Optional: vertically center the text */
   color: white;
-  /* Optional: text color inside the circle */
   font-family: 'Gillroy', sans-serif;
-  /* Optional: font style */
 }
 
 .hand {
@@ -289,50 +234,43 @@ nav {
 
 .hand {
   animation: shake 10s ease-in-out infinite;
-  /* Apply shake animation */
   transform-origin: bottom center;
-  /* Set pivot point for rotation */
+
 }
 
 
-/* Stroke around the circle */
+
 .stroke {
   position: absolute;
   height: 50vmax;
-  /* Slightly larger than the circle */
   width: 50vmax;
   border-radius: 50%;
   border: 2px solid #17C95F;
-  /* Make the base transparent */
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: visible;
-  /* Ensure ellipses are not clipped */
 }
 
-/* Ellipses on the stroke */
 .ellipse {
   position: absolute;
   width: 1vmax;
   height: 1vmax;
   background: linear-gradient(to bottom, #17C95F, #bfffd8);
   border-radius: 50%;
-  /* Make it circular */
+
 }
 
-/* Position ellipses statically */
+
 .ellipse:nth-child(1) {
   top: 0;
-  /* Place at the top of the circle */
   left: 40%;
   transform: translateX(-50%);
 }
 
 .ellipse:nth-child(2) {
   bottom: 0;
-  /* Place at the bottom of the circle */
   left: 40%;
   transform: translateX(-50%);
 }
@@ -342,7 +280,6 @@ nav {
   width: 4vmax;
   height: 4vmax;
   left: 16%;
-  /* Place on the left of the circle */
   transform: translateY(-50%);
 }
 
@@ -369,34 +306,34 @@ nav {
 
 hr {
   width: 80%;
-  
+
   margin: 40px auto;
-  
+
   border: none;
-  
+
   height: 1px;
-  
+
   background: linear-gradient(to right, #ccc, #000, #ccc);
- 
+
   opacity: 0.8;
- 
+
 }
 
 .features {
   font-family: 'Gillroy', sans-serif;
   display: flex;
- 
+
   flex-direction: row;
- 
+
   justify-content: space-evenly;
-  
+
   align-items: center;
-  
+
   padding: 40px;
-  
+
   padding-bottom: 80px;
   margin-top: 10px;
-  
+
 }
 
 .feature-item {
